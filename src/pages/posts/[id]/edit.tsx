@@ -76,7 +76,7 @@ const EditPostPage = ({ post }: EditPostPageProps) => {
                                   <input
                                       name={key}
                                       type="number"
-                                      defaultValue={post[key] as number}
+                                      defaultValue={post[key]}
                                       className="mt-2 block w-full rounded-md border border-gray-200 px-3 py-2 shadow outline-none"
                                   />
                               </div>
@@ -114,7 +114,7 @@ const EditPostPage = ({ post }: EditPostPageProps) => {
                                   <input
                                       name={key}
                                       type="checkbox"
-                                      defaultChecked={post[key] as boolean}
+                                      defaultChecked={!!post[key]}
                                       className="h-5 w-5 text-blue-600 rounded border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                   />
                               </div>

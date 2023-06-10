@@ -1,3 +1,4 @@
+import { GetServerSideProps } from "next";
 import { Favorite, favoriteMetadata as modelMetadata, FavoriteMetadata } from '@/db/models/favorite';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
