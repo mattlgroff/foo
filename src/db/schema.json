@@ -55,6 +55,51 @@
       "unique_index": false
     }
   },
+  "favorites": {
+    "id": {
+      "data_type": "uuid",
+      "is_nullable": "NO",
+      "column_default": "uuid_generate_v4()",
+      "primary_key": true,
+      "foreign_key": null,
+      "unique_index": true
+    },
+    "name": {
+      "data_type": "character varying",
+      "is_nullable": "NO",
+      "column_default": null,
+      "primary_key": false,
+      "foreign_key": null,
+      "unique_index": false
+    },
+    "user_id": {
+      "data_type": "uuid",
+      "is_nullable": "NO",
+      "column_default": null,
+      "primary_key": false,
+      "foreign_key": {
+        "table": "favorites",
+        "column": "user_id"
+      },
+      "unique_index": false
+    },
+    "created_at": {
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP",
+      "primary_key": false,
+      "foreign_key": null,
+      "unique_index": false
+    },
+    "updated_at": {
+      "data_type": "timestamp with time zone",
+      "is_nullable": "YES",
+      "column_default": "CURRENT_TIMESTAMP",
+      "primary_key": false,
+      "foreign_key": null,
+      "unique_index": false
+    }
+  },
   "posts": {
     "id": {
       "data_type": "uuid",
